@@ -105,6 +105,7 @@ return new class extends Migration
                     'name' => 'شهر',
                     'plural_name' => 'شهور',
                     'created_at' => '2023-03-21 22:40:33',
+                    'updated_at' => '2023-03-21 22:40:33',
                 ],
                 [
                     'id' => 12,
