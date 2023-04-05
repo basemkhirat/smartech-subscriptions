@@ -4,6 +4,7 @@ namespace Smartech\Subscriptions;
 
 use Illuminate\Support\Str;
 use Illuminate\Support\ServiceProvider;
+use Smartech\Subscriptions\Commands\SubscriptionsMigrateCommand;
 
 /**
  * Class ServiceProvider
@@ -68,6 +69,14 @@ class SubscriptionServiceProvider extends ServiceProvider
 
         foreach ($this->app['config']["subscriptions"]["models"] as $service => $class) {
             $this->app->singleton("subscriptions.models." . $service,  $class);
+        }
+
+        // Registering commands
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                SubscriptionsMigrateCommand::class,
+            ]);
         }
     }
 }

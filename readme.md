@@ -32,11 +32,19 @@ $ composer require smartech/subscriptions
 Smartech\Subscriptions\SubscriptionServiceProvider::class
 ```
 
-##### 4) Publishing.
+##### 3) Publishing configuration file.
 
 ```bash
 $ php artisan vendor:publish --provider="Smartech\Subscriptions\SubscriptionServiceProvider"
 ```
+
+##### 4) Migrate tables.
+
+```bash
+$ php artisan subscriptions:migrate
+```
+
+
 
 <br />
 
@@ -61,6 +69,13 @@ $app->register(Smartech\Subscriptions\SubscriptionServiceProvider::class);
 ```php
 $app->configure('subscriptions');
 ```
+
+##### 4) Migrate tables.
+
+```bash
+$ php artisan subscriptions:migrate
+```
+
 
 <br />
 
