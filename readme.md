@@ -29,13 +29,13 @@ $ composer require smartech/subscriptions
 ##### 2) Add package service provider (< laravel 5.5).
 
 ```php
-Smartech\Subscriptions\ServiceProvider::class
+Smartech\Subscriptions\SubscriptionServiceProvider::class
 ```
 
 ##### 4) Publishing.
 
 ```bash
-$ php artisan vendor:publish --provider="Smartech\Subscriptions\ServiceProvider"
+$ php artisan vendor:publish --provider="Smartech\Subscriptions\SubscriptionServiceProvider"
 ```
 
 <br />
@@ -50,7 +50,7 @@ $ composer require Smartech\Subscriptions
 ##### 2) Add package service provider in `bootstrap/app.php`.
 
 ```php
-$app->register(Smartech\Subscriptions\ServiceProvider::class);
+$app->register(Smartech\Subscriptions\SubscriptionServiceProvider::class);
 ```
 	
 ##### 3) Copy the config file: `vendor/smartech/subscriptions/config/subscriptions.php` to the application config directory.
