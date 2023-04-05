@@ -10,7 +10,7 @@ trait HasSubscription
 {
 
     /**
-     * Subscription relation
+     * subscription relation
      *
      * @return HasOne
      */
@@ -21,7 +21,6 @@ trait HasSubscription
 
     /**
      * Check if user has specific plan
-     *
      * @param String $plan_slug
      *
      * @return bool
@@ -33,7 +32,6 @@ trait HasSubscription
 
     /**
      * Check if user can use specific feature
-     *
      * @param String $feature_slug
      *
      * @return bool
@@ -47,7 +45,6 @@ trait HasSubscription
 
     /**
      * Subscribe to a plan
-     *
      * @param String $plan_slug
      *
      * @return Subscription

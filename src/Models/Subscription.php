@@ -36,18 +36,28 @@ class Subscription extends Model
         "is_active" => "bool"
     ];
 
+    /**
+     * plan relation
+     *
+     * @return BelongsTo
+     */
     public function plan(): BelongsTo
     {
         return $this->belongsTo(config("subscriptions.models.plan"));
     }
 
+    /**
+     * pricing relation
+     *
+     * @return BelongsTo
+     */
     public function pricing(): BelongsTo
     {
         return $this->belongsTo(config("subscriptions.models.pricing"));
     }
 
     /**
-     * Active scope
+     * active scope
      *
      * @return bool
      */
@@ -57,7 +67,7 @@ class Subscription extends Model
     }
 
     /**
-     * Inactive scope
+     * inactive scope
      *
      * @return bool
      */
@@ -67,7 +77,7 @@ class Subscription extends Model
     }
 
     /**
-     * Trial scope
+     * trial scope
      *
      * @return bool
      */
@@ -237,6 +247,8 @@ class Subscription extends Model
 
     /**
      * Set user
+     *
+     * @return Subscription
      */
     public function setUser($user_id): Subscription
     {
@@ -247,6 +259,8 @@ class Subscription extends Model
 
     /**
      * Set plan
+     *
+     * @return Subscription
      */
     public function setPlan($plan_id): Subscription
     {
@@ -257,6 +271,8 @@ class Subscription extends Model
 
     /**
      * Set pricing
+     *
+     * @return Subscription
      */
     public function setPricing($pricing_id): Subscription
     {
@@ -281,6 +297,8 @@ class Subscription extends Model
 
     /**
      * Set if trial requested
+     *
+     * @return Subscription
      */
     public function setTrial(): Subscription
     {
@@ -318,6 +336,8 @@ class Subscription extends Model
 
     /**
      * Subscribe to the plan
+     *
+     * @return bool
      */
     public function subscribe(): bool
     {
@@ -362,7 +382,6 @@ class Subscription extends Model
 
     /**
      * Change subscription plan.
-     *
      * @param String $plan_slug
      *
      * @return bool

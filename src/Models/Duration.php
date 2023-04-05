@@ -15,11 +15,21 @@ class Duration extends Model
 
     protected $hidden = ["pivot"];
 
+    /**
+     * translations relation
+     *
+     * @return HasMany
+     */
     function translations(): HasMany
     {
         return $this->hasMany(config("subscriptions.models.duration_translation"));
     }
 
+    /**
+     * Translation relation
+     *
+     * @return HasOne
+     */
     function translation(): HasOne
     {
         return $this->hasOne(config("subscriptions.models.duration_translation"))->where("lang", app()->getLocale());

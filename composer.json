@@ -1,6 +1,6 @@
 {
     "name": "smartech/subscriptions",
-    "description": "Manage user subscriptions for Laravel/Lumen apps",
+    "description": "Manage users subscriptions for Laravel/Lumen apps",
     "keywords": [
         "php",
         "laravel",

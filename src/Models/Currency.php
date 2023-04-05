@@ -15,11 +15,21 @@ class Currency extends Model
 
     protected $hidden = ["pivot"];
 
+    /**
+     * translations relation
+     *
+     * @return HasMany
+     */
     function translations(): HasMany
     {
         return $this->hasMany(config("subscriptions.models.currency_translation"));
     }
 
+    /**
+     * translation relation
+     *
+     * @return HasOne
+     */
     function translation(): HasOne
     {
         return $this->hasOne(config("subscriptions.models.currency_translation"))->where("lang", app()->getLocale());

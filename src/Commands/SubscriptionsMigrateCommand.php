@@ -28,8 +28,22 @@ class SubscriptionsMigrateCommand extends Command
      */
     public function handle()
     {
+
+        $path = dirname(dirname(dirname(__FILE__))) . "/database/migrations";
+
         $this->call('migrate', [
-            '--path' => dirname(dirname(dirname(__FILE__))) . "/database/migrations",
+            '--path' => $this->getRelativePath($path),
         ]);
+    }
+
+    /**
+     * Get Relative path
+     * @param string $path
+     *
+     * @return string
+     */
+    function getRelativePath($path = '')
+    {
+        return str_replace(app()->basePath(), "", $path);
     }
 }

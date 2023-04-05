@@ -14,21 +14,41 @@ class Pricing extends Model
 
     protected $hidden = ["price_currency", "price_interval"];
 
+    /**
+     * plan relation
+     *
+     * @return BelongsTo
+     */
     public function plan(): BelongsTo
     {
         return $this->belongsTo(config("subscriptions.models.plan"));
     }
 
-    public function price_currency()
+    /**
+     * price_currency relation
+     *
+     * @return BelongsTo
+     */
+    public function price_currency(): BelongsTo
     {
         return $this->belongsTo(config("subscriptions.models.currency"), "currency", "slug");
     }
 
-    public function price_interval()
+    /**
+     * price_currency relation
+     *
+     * @return BelongsTo
+     */
+    public function price_interval(): BelongsTo
     {
         return $this->belongsTo(config("subscriptions.models.duration"), "invoice_interval", "slug");
     }
 
+    /**
+     * title getter
+     *
+     * @return string
+     */
     public function getTitleAttribute()
     {
         if ($this->amount == 0) return trans("subscriptions::subscriptions.free");
