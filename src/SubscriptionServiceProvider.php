@@ -41,6 +41,10 @@ class SubscriptionServiceProvider extends ServiceProvider
 
         $this->loadTranslationsFrom($this->basePath . "/resources/lang", "subscriptions");
 
+        // Load migration files
+
+        $this->loadMigrationsFrom($this->basePath . "/database/migrations");
+
         // Auto configuration with lumen framework.
 
         if (Str::contains($this->app->version(), 'Lumen')) {
