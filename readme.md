@@ -15,7 +15,6 @@ Manage user subscriptions for Laravel/Lumen apps
 
 ## Installation
 
-<br />
 
 ### <u>Laravel Installation</u>
 
