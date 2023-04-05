@@ -62,7 +62,7 @@ class SubscriptionServiceProvider extends ServiceProvider
         // Registering models into IOC
 
         foreach ($this->app['config']["subscriptions"]["models"] as $service => $class) {
-            $this->app->singleton("subscriptions.models." . $service,  $class);
+            $this->app->bind("subscriptions.models." . $service,  $class);
         }
 
         // Registering commands
