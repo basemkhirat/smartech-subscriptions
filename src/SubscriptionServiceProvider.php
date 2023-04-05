@@ -35,7 +35,7 @@ class SubscriptionServiceProvider extends ServiceProvider
         // Config Publishing
 
         $this->publishes([
-            $this->basePath . '/config/' => config_path(),
+            $this->basePath . '/config/' => $this->app->basePath() . '/config',
         ], "subscriptions.config");
 
         // Load translations files
@@ -45,12 +45,6 @@ class SubscriptionServiceProvider extends ServiceProvider
         // Load migration files
 
         $this->loadMigrationsFrom($this->basePath . "/database/migrations");
-
-        // Auto configuration with lumen framework.
-
-        if (Str::contains($this->app->version(), 'Lumen')) {
-            $this->app->configure("subscriptions");
-        }
     }
 
     /**
