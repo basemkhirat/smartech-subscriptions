@@ -32,7 +32,7 @@ $ composer require smartech/subscriptions
 Smartech\Subscriptions\SubscriptionServiceProvider::class
 ```
 
-##### 3) Publishing configuration file.
+##### 3) Publishing the configuration file (Optional).
 
 ```bash
 $ php artisan vendor:publish --provider="Smartech\Subscriptions\SubscriptionServiceProvider"
@@ -61,10 +61,11 @@ $ composer require Smartech\Subscriptions
 $app->register(Smartech\Subscriptions\SubscriptionServiceProvider::class);
 ```
 	
-##### 3) Copy the config file: `vendor/smartech/subscriptions/config/subscriptions.php` to the application config directory.
+##### 3) Publishing the configuration file (Optional)
+
+- Copy the config file: `vendor/smartech/subscriptions/config/subscriptions.php` to the application config directory.
 	
-	
-##### 4) Set Lumen to parse the configuration file.
+- Setting Lumen to parse the configuration file.
 
 ```php
 $app->configure('subscriptions');
@@ -95,7 +96,7 @@ class User extends Authenticatable
 {
     use HasSubscription;
 
-    ......
+    //
 }
 
 ```
