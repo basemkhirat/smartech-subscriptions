@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\DB;
 
 return new class extends Migration
 {
@@ -30,24 +29,6 @@ return new class extends Migration
                 $table->dateTime('ended_at')->nullable()->index('ended_at');
                 $table->dateTime('canceled_at')->nullable();
             });
-
-            DB::table('st_subscriptions')->insert([
-                [
-                    'id' => 38,
-                    'user_id' => 7080,
-                    'plan_id' => 2,
-                    'pricing_id' => 2,
-                    'amount' => 10.0,
-                    'currency' => 'usd',
-                    'is_trial' => 0,
-                    'is_active' => 1,
-                    'created_at' => '2023-04-03 22:45:21',
-                    'updated_at' => '2023-04-05 12:18:23',
-                    'started_at' => '2023-04-05 12:16:52',
-                    'ended_at' => '2023-05-05 12:16:52',
-                    'canceled_at' => '2023-04-05 12:18:23',
-                ]
-            ]);
         }
     }
 
