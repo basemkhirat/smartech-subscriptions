@@ -1,6 +1,6 @@
 {
     "name": "smartech/subscriptions",
-    "description": "Laravel, Lumen and Native php elasticseach query builder to build complex queries using an elegant syntax",
+    "description": "Manage user subscriptions for Laravel/Lumen apps",
     "keywords": [
         "php",
         "laravel",
