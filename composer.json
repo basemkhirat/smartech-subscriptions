@@ -1,0 +1,38 @@
+{
+    "name": "smartech/subscriptions",
+    "description": "Laravel, Lumen and Native php elasticseach query builder to build complex queries using an elegant syntax",
+    "keywords": [
+        "php",
+        "laravel",
+        "lumen",
+        "subscriptions",
+        "plans",
+        "packages"
+    ],
+    "license": "MIT",
+    "type": "package",
+    "homepage": "https://smartech.online/",
+    "authors": [
+        {
+            "name": "Smartech",
+            "email": "basemkhirat@smartech.online"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Smartech\\Subscriptions\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.6.6",
+        "illuminate/support": "*",
+        "carbon/carbon": "*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Smartech\\subscriptions\\SubscriptionServiceProvider"
+            ]
+        }
+    }
+}
