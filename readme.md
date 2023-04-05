@@ -9,7 +9,7 @@ Manage user subscriptions for Laravel/Lumen apps
 
 
 - `php` >= 5.6.6 
-- `laravel/laravel` >= 5.* or `laravel/lumen` >= 5.* or `composer application`
+- `laravel/laravel` >= 5.* or `laravel/lumen` >= 5.*
 
 <br />
 
