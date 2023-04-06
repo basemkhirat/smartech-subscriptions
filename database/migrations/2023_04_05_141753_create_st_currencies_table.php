@@ -17,7 +17,7 @@ return new class extends Migration
         if (!Schema::hasTable('st_currencies')) {
             Schema::create('st_currencies', function (Blueprint $table) {
                 $table->increments('id');
-                $table->string('slug', 100)->unique('slug')->comment('A unique name for feature, eg: access_specific_section, ad_free ..');
+                $table->string('slug', 100)->unique('slug')->comment('A unique name for currency');
                 $table->string('symbol', 10)->nullable();
                 $table->timestamp('created_at')->useCurrent();
                 $table->timestamp('updated_at')->useCurrent();
