@@ -40,7 +40,7 @@ trait HasSubscription
     {
         $valid_subscription = $this->subscription()->valid()->first();
 
-        return !!$valid_subscription->plan?->features->where("slug", $feature_slug)->first();
+        return !!$valid_subscription?->plan?->features->where("slug", $feature_slug)->first();
     }
 
     /**
